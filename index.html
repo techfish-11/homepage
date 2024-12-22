@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TechFish_Lab - 自宅サーバーラボ">
+    <meta name="keywords" content="TechFish, 自宅サーバー, Web開発, Ubuntu, Nginx, Docker, Python, React, Grafana">
+    <meta name="robots" content="index, follow">
+    <title>TechFish_Lab - 自宅サーバー管理とWeb開発</title>
+    <link rel="icon" href="https://cdn.sakana11.org/icon.png" type="image/png">
+
+    <style>
+        /* 全体のスタイル */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            background: url('/public/water-bg.webp') no-repeat center center fixed;
+            background-size: cover;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        /* メインコンテンツ */
+        .content-container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 2.8em;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        h2, h3 {
+            font-size: 1.8em;
+            margin-top: 20px;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+
+        ul {
+            text-align: left;
+            margin: 0 auto;
+            max-width: 80%;
+            padding-left: 20px;
+        }
+
+        ul li {
+            margin: 5px 0;
+        }
+
+        /* バナー */
+        .banner-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .banner-container a img {
+            max-height: 60px;
+            transition: transform 0.3s ease;
+        }
+
+        .banner-container a img:hover {
+            transform: scale(1.1);
+        }
+
+        /* ロゴの左下配置 */
+        .logo-container {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+        }
+
+        .logo-container a img {
+            max-height: 35px;
+            margin-right: 10px;
+        }
+
+        /* フッター */
+        .footer {
+            color: white;
+            padding: 15px 0;
+            margin-top: 40px;
+            font-size: 1em;
+        }
+
+        /* メディアクエリ */
+        @media screen and (max-width: 768px) {
+            h1 {
+                font-size: 2.2em;
+            }
+
+            h2, h3 {
+                font-size: 1.6em;
+            }
+
+            p {
+                font-size: 1em;
+            }
+
+            ul {
+                max-width: 100%;
+            }
+
+            .banner-container a img {
+                max-height: 50px;
+            }
+        }
+
+    /* RayID表示用の固定スタイル */
+    .rayid-container {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: rgba(0, 0, 0, 0.7);
+        color: #fff;
+        padding: 10px 15px;
+        border-radius: 8px;
+        font-size: 0.9em;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+        z-index: 1000;
+        text-align: left;
+    }
+
+        /* ボタンのスタイル（小さく、目立たないようにする） */
+        .mask-button {
+            display: inline-block;
+            margin-top: 5px;
+            padding: 3px 8px;
+            background: rgba(255, 255, 255, 0.2);
+            color: #ddd;
+            font-size: 0.8em;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .mask-button:hover {
+            background: rgba(255, 255, 255, 0.5);
+            color: #333;
+        }
+
+    </style> 
+    <!-- Matomo -->
+    <script>
+        var _paq = window._paq = window._paq || [];
+        /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+        _paq.push(['trackPageView']);
+        _paq.push(['enableLinkTracking']);
+        (function() {
+        var u="https://analytics.sakana11.org/";
+        _paq.push(['setTrackerUrl', u+'matomo.php']);
+        _paq.push(['setSiteId', '1']);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+        })();
+    </script>
+    <!-- End Matomo Code -->  
+</head>
+<body>
+    <div class="content-container">
+        <h1>TechFish_Lab</h1>
+        <p>こんにちは。Techfishです。自宅サーバーを運用しています。</p>
+
+        <h2>スキル</h2>
+        <ul>
+            <li>フロントエンド: React, Flutter, Next.js, HTML, CSS</li>
+            <li>バックエンド: Javascript, Typescript, MySQL, PostgreSQL, Python（APIサーバー）</li>
+            <li>サーバー: Ubuntuサーバー, Debian, Nginx, Apache2, LXC</li>
+            <li>その他: Cloudflare, エンタープライズサーバー, Raspberry Piなどの電子工作</li>
+        </ul>
+
+        <h2>得意なスキル</h2>
+        <ul>
+            <li>Ubuntuサーバー, Python, Webサーバー</li>
+        </ul>
+
+        <h2>苦手なもの</h2>
+        <ul>
+            <li>Kubernetes</li>
+        </ul>
+
+        <h2>自宅サーバーでやっていること</h2>
+        <ul>
+            <li>全ノード監視ツールの使用</li>
+            <li>Webサイト運用</li>
+            <li>Nginx (Webサーバー, リバースプロキシ)</li>
+            <li>LXC</li>
+            <li>ProxmoxVE</li>
+            <li>などなど...</li>
+        </ul>
+
+        <h2>リンク集</h2>
+        <a href="/link.html">こちら</a>
+
+        <h2>自宅サーバーについて</h2>
+        <a href="/about-server.html">こちら</a>
+
+        <h2>相互リンク</h2>
+        <div class="banner-container">
+            <a href="https://sakana11.org"><img src="https://cdn.sakana11.org/banner.jpg" alt="banner"></a>
+            <a href="https://miry.jp"><img src="https://miry.jp/public/banner.png" alt="banner"></a>
+            <a href="https://edamamex.dev"><img src="https://cdn.edamamex.dev/banner.png?external" alt="banner"></a>
+            <a href="https://info.takos.jp"><img src="https://info.takos.jp/banner.png" alt="banner"></a>
+            <a href="https://371tti.net"><img src="/public/banner.png" alt="banner" height="50mm"></a>
+        </div>
+        <h3>相互リンク(テキスト)</h3>
+        <a href="https://akku1139.github.io/">akku</a>
+
+        <br>
+        <h2>Musubink</h2>
+        <a href="https://musubink.fyi/">←Musubink→</a>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 TechFish_Lab. All Rights Reserved.</p>
+        <a href="/debug.html">debug画面はこちら</a>
+        <div id="rayid-container" class="rayid-container">
+            <p>Cloudflare RayID: <span id="rayid-display">取得中...</span></p>
+            <button id="mask-toggle" class="mask-button">伏せ字にする</button>
+        </div>    
+    </footer>
+
+    <script>
+        async function displayRayID() {
+            const rayIDDisplay = document.getElementById('rayid-display');
+            let rayID = '';
+            let isMasked = false;
+
+            try {
+                // Cloudflare RayID取得（応答ヘッダー）
+                const response = await fetch('/');
+                rayID = response.headers.get('Cf-Ray');
+                rayIDDisplay.textContent = rayID || '取得失敗';
+            } catch (error) {
+                rayIDDisplay.textContent = 'エラー発生';
+                console.error('RayID取得エラー:', error);
+            }
+
+            // ボタンで伏せ字を切り替える機能
+            document.getElementById('mask-toggle').addEventListener('click', () => {
+                if (!rayID) return; // 取得できていない場合は無視
+                isMasked = !isMasked;
+                rayIDDisplay.textContent = isMasked 
+                    ? rayID.replace(/.(?=.{4})/g, '*') // 伏せ字（末尾4文字以外を*にする）
+                    : rayID;
+                document.getElementById('mask-toggle').textContent = isMasked ? '伏せ字を解除' : '伏せ字にする';
+            });
+        }
+
+        // ページ読み込み後にRayIDを取得して表示
+        document.addEventListener('DOMContentLoaded', displayRayID);
+    </script>
+</body>
+</html>
